@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     #internal apps
     "users",
+    "events",
 
 
 ]
@@ -97,8 +98,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": env("DB_NAME"),
-        "USER": "root",
-        "PASSWORD": "Peeky123#",
+        "USER": env("ROOT"),
+        "PASSWORD": env("PASSWORD"),
         "HOST": env("HOST"),
         "PORT": env("PORT"),
     }
